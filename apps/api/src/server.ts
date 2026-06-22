@@ -1,5 +1,4 @@
 import Fastify from 'fastify';
-import cors from 'cors';
 import { db } from '@repsync/db';
 import * as schema from '@repsync/db';
 import { eq, desc } from 'drizzle-orm';

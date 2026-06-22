@@ -7,7 +7,6 @@ import {
 import { db } from '@repsync/db';
 import * as schema from '@repsync/db';
 import { eq, desc } from 'drizzle-orm';
-import { v4 as uuidv4 } from 'uuid'; // need to install uuid
 
 const server = new Server(
   {

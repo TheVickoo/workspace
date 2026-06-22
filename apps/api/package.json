@@ -8,16 +8,16 @@
     "start": "tsx src/server.ts"
   },
   "dependencies": {
-    "fastify": "^4.26.0",
+    "@fastify/cors": "^11.2.0",
     "@modelcontextprotocol/sdk": "^1.0.0",
     "@repsync/db": "workspace:*",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.0"
+    "dotenv": "^16.4.0",
+    "drizzle-orm": "^0.45.2",
+    "fastify": "^4.26.0"
   },
   "devDependencies": {
+    "@repsync/config": "workspace:*",
     "tsx": "^4.7.0",
-    "typescript": "^5.4.0",
-    "@types/cors": "^2.8.17",
-    "@repsync/config": "workspace:*"
+    "typescript": "^5.4.0"
   }
 }
