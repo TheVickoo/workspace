@@ -1,0 +1,26 @@
+{
+  "name": "Exercise App Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "workspaceFolder": "/home/node/workspace",
+  "remoteUser": "node",
+  "remoteEnv": {
+    "TZ": "Australia/Brisbane"
+  },
+  "mounts": [
+    // Persist entire home directory (covers all agent configs, credentials, dotfiles)
+    "source=exercise-app-home,target=/home/node,type=volume",
+    // Local workspace (takes precedence over the home volume for this path)
+    "source=${localWorkspaceFolder},target=/home/node/workspace,type=bind,consistency=cached"
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true
+      }
+    }
+  }
+}
